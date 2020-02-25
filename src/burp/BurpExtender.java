@@ -151,7 +151,7 @@ public class BurpExtender implements IBurpExtender, IScannerCheck
             for (int i = 0; i < model.getSize(); i++)
             {
                 String term = model.getElementAt(i);
-                Pattern pattern = Pattern.compile(term);
+                Pattern pattern = Pattern.compile(term, Pattern.CASE_INSENSITIVE);
                 Matcher matcher = pattern.matcher(new String(text));
                 List <ScanMatch>matches = new ArrayList<>(); //Possible places for search results
 

@@ -9,5 +9,3 @@ An extension for Burp that searches for a configurable list of search terms in r
 ## License
 
 MIT
-
-[link](http://mdp.tylingsoft.com/)

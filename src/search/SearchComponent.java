@@ -230,8 +230,13 @@ public class SearchComponent extends JPanel
             }
             
             //Add Text
-            SearchComponent.this.model.addElement(SearchComponent.this.jTerm.getText());
-            SearchComponent.this.saveSettings();
+            if (SearchComponent.this.jTerm.getText().trim().length() != 0)
+            {
+                SearchComponent.this.model.addElement(SearchComponent.this.jTerm.getText());
+                SearchComponent.this.saveSettings();
+            }
+            this.jTerm.setText("");
+
         });
 
         JPanel panel = new JPanel(new FlowLayout());

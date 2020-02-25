@@ -130,7 +130,7 @@ public class BurpExtender implements IBurpExtender, IScannerCheck
     {
         try 
         {
-            this.output.write("Search Plugin -- ".getBytes());
+            this.output.write("Passive Search Plugin -- ".getBytes());
             this.output.write(toPrint.getBytes());
             this.output.write("\n".getBytes());
             this.output.flush();
@@ -160,7 +160,7 @@ public class BurpExtender implements IBurpExtender, IScannerCheck
                     matches.add(new ScanMatch(matcher.group(), matcher.start() + offSet, matcher.end() + offSet, ""));
                 }
                 
-                      if (matches.size() > 0)
+                if (matches.size() > 0)
                 {            
                     ScanMatch [] arrMatches = new ScanMatch[matches.size()];
                     matches.toArray(arrMatches);

@@ -4,8 +4,10 @@ An extension for Burp that searches for a configurable list of search terms in r
 
 ## Contributors
 
-[https://chs.us](Carl Sampson) - [https://twitter.com/chs](@chs)
+[Carl Sampson](https://chs.us) - [@chs](https://twitter.com/chs)
 
 ## License
 
 MIT
+
+[link](http://mdp.tylingsoft.com/)

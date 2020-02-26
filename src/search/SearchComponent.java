@@ -41,6 +41,7 @@ import java.util.Base64;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.table.DefaultTableModel;
+import static javax.swing.JOptionPane.showMessageDialog;
 
 /**
  *
@@ -177,7 +178,7 @@ public class SearchComponent extends JPanel
         JLabel jLabel2 = new JLabel();
         jLabel2.setFont(new Font("Tahoma", 1, 13));
         jLabel2.setForeground(new Color(229, 137, 0));
-        jLabel2.setText("Search Items");
+        jLabel2.setText("Search Terms");
         jLabel2.setAlignmentX(CENTER_ALIGNMENT);
         jLabel2.setToolTipText("Right Click to Delete");
 
@@ -232,8 +233,15 @@ public class SearchComponent extends JPanel
             //Add Text
             if (SearchComponent.this.jTerm.getText().trim().length() != 0)
             {
-                SearchComponent.this.model.addElement(SearchComponent.this.jTerm.getText());
-                SearchComponent.this.saveSettings();
+                if (model.contains(SearchComponent.this.jTerm.getText()))
+                {
+                   showMessageDialog(null, SearchComponent.this.jTerm.getText() + " is already in the Search Terms."); 
+                }
+                else
+                {
+                    SearchComponent.this.model.addElement(SearchComponent.this.jTerm.getText());
+                    SearchComponent.this.saveSettings();
+                }
             }
             this.jTerm.setText("");
 
